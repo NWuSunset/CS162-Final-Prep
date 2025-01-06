@@ -25,3 +25,31 @@ node* list::buildCopy(node* head) {
 
   return head; //return the head node
 }
+
+//removes all nodes will a value of ten
+void list::removeTen(node* &head) {
+  if (head->data == 10) {
+    node* temp = head->next;
+    delete head;
+    head = temp;
+  }
+
+  node* curr = head;
+    
+  while (curr->next != nullptr) {
+    if (curr->next->data == 10) {
+      node* temp = curr->next;
+      curr->next = curr->next->next;
+      delete temp;
+    }
+    curr = curr->next;
+  }
+
+  //check again in case they were in a row:
+  curr = head;
+  while (curr->next != nullptr) {
+    if (curr->next->data == 10) {
+      removeTen(head);
+    }
+  }
+}

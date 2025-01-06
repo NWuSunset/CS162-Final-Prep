@@ -20,6 +20,7 @@ public:
 
   void removeHead(node* &head);
   node* buildCopy(node* head);
+  void removeTen(node* &head);
 };
 
 #endif
