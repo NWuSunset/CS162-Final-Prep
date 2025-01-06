@@ -9,7 +9,11 @@ int main() {
   linkedList->build(head); //creates a linked list by passing head in by reference
   linkedList->print(head);
   
-  remove(head); //removes a node from the linked list
+  linkedList->removeHead(head); //removes a node from the linked list
+  linkedList->print(head); //now list with head removed
+
+  node* headCopy = linkedList->buildCopy(head);
+  linkedList->print(headCopy);
   
   return 0;
 }

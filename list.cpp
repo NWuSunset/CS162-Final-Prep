@@ -2,9 +2,7 @@
 
 using namespace std;
 
-list::list() {
-  
-}
+list::list() = default;
 
 void list::build(node* &head) {
   srand((unsigned)time(0)); //Random number
@@ -27,4 +25,5 @@ void list::print(node* head) {
     cout << head->data << " ";
     head = head->next;
   }
+  cout << endl;
 }

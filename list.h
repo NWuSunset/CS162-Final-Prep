@@ -15,9 +15,11 @@ class list {
 public:
   list();
     
-    void build(node* &head);
+  void build(node* &head);
   void print(node* head);
 
+  void removeHead(node* &head);
+  node* buildCopy(node* head);
 };
 
 #endif
