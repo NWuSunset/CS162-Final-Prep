@@ -21,6 +21,12 @@ public:
   void removeHead(node* &head);
   node* buildCopy(node* head);
   void removeTen(node* &head);
+
+  void addNode(node* &head, int data);
+  void addNodeRecur(node* &curr, int data);
+
+  void removeNode(node* &head, int data);
+  void removeNodeRecur(node* &curr, int data);
 };
 
 #endif
